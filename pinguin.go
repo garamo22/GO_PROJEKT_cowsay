@@ -1,21 +1,18 @@
-
-
 package main
 
-import
-(
+import (
 	"bufio"
 	"fmt"
 	"os"
 )
 
 func main() {
-	
-	scanner := bufio.NewScanner(os.Stdin) // scanner
-	fmt.Print("Enter Text:" )
+
+	scanner := bufio.NewScanner(os.Stdin) // scanner Funktion
+	fmt.Print("Enter Text:")
 	scanner.Scan()
 	text := scanner.Text()
-	
+
 	for k := 0; k < len(text); k++ {
 		fmt.Printf("-")
 	}
@@ -30,7 +27,7 @@ func main() {
 }
 func printPinguin() {
 	pinguin :=
-					`	
+		`	
 	\   .---.
 	   |o_o  |
 	   |:_/  |
@@ -41,8 +38,5 @@ func printPinguin() {
 				
 				`
 
-
-	
-
-	fmt.Println(pinguin) // ausgabe in Terminal
+	fmt.Println(pinguin) // Ausgabe in Terminal
 }
