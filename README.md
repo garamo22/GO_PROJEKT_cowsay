@@ -11,5 +11,6 @@ implementation of cowsay code in go
 ***
 *language used go
 *scanner function
+*argument function
 
 

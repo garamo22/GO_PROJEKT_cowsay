@@ -1,17 +1,19 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 )
 
+// ohne scanner, stattdessen mit argument Uebergabe als string
 func main() {
 
-	scanner := bufio.NewScanner(os.Stdin) // scanner Funktion
-	fmt.Print("Enter Text:")
-	scanner.Scan()
-	text := scanner.Text()
+	if len(os.Args) == 1 {
+		fmt.Println("error: bitte argument eingeben!")
+		os.Exit(0)
+	}
+
+	text := os.Args[1]
 
 	for k := 0; k < len(text); k++ {
 		fmt.Printf("-")
@@ -25,6 +27,7 @@ func main() {
 
 	printCow() // Aufrufen von Methode
 }
+
 func printCow() {
 	cow := ` 
 
@@ -36,5 +39,5 @@ func printCow() {
 			       
 			   `
 
-	fmt.Println(cow) // Ausgabe in Terminal
+	fmt.Println(cow) // ausgabe in Terminal
 }
